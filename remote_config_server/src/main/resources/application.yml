@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: remote-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Tofu-zhbit/register_center.git
+          search-paths: remote_config
+          username: TOFU
+          password: TOFUchen789789
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
